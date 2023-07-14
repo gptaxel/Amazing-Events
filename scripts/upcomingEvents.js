@@ -1,4 +1,7 @@
 let containerCards = document.getElementById("sectionCards");
+let contenedorCheck = document.getElementById("checkContainer");
+let search = document.getElementById("searchInput");
+const arrayEventos = data.events;
 
 function createCard(objeto) {
   return `
