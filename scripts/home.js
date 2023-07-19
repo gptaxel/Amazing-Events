@@ -1,4 +1,7 @@
 let containerCards = document.getElementById("sectionCards");
+let contenedorCheck = document.getElementById("checkContainer");
+let search = document.getElementById("searchInput");
+const arrayEventos = data.events;
 
 function createCard(objeto) {
   return `
@@ -23,4 +26,48 @@ function showCards(events) {
     }
 }
 
+function crearCheckbox(categoria) {
+    return `<div class="row ps-3">
+      <div class="form-check col-sm-6 col-xl">
+          <input class="form-check-input" type="checkbox" value="${categoria}" id="${categoria}">
+          <label class="form-check-label" for="${categoria}">
+             ${categoria}
+          </label>
+      </div> `;
+}
+  
+
+function mostrarCheckbox(array, lugar) {
+    for (const categoria of array) {
+      lugar.innerHTML += crearCheckbox(categoria);
+    }
+}
+
+let categoriasRepetidas = arrayEventos.map((e) => e.category);
+console.log(categoriasRepetidas, contenedorCheck);
+
+let categoriasSinRepetir = Array.from()
+
+
 showCards(data.events)
+mostrarCheckbox(categoriasSinRepetir, contenedorCheck)
+
+
+function filtrarCheck () {
+
+}
+
+
+function filtrarTexto(){
+
+}
+
+search.addEventListener("keyup", () => {
+    containerCards.innerHTML = "";
+    
+})
+
+
+contenedorCheck.addEventListener("change", () => {
+    
+  });

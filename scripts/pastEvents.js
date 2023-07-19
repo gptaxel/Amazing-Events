@@ -1,4 +1,7 @@
 let containerCards = document.getElementById("sectionCards");
+let contenedorCheck = document.getElementById("checkContainer");
+let search = document.getElementById("searchInput");
+const arrayEventos = data.events;
 
 function createCard(objeto) {
   return `
@@ -36,3 +39,10 @@ function eventSelector(events, currentDate) {
 let pastEvents = eventSelector(data.events, data.currentDate);
 showCards(pastEvents, containerCards);
 console.log(pastEvents);
+
+
+let num = 0
+do {
+  console.log(num)
+  num ++
+} while (num > 0 && num <=10);
